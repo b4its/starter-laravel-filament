@@ -36,7 +36,6 @@ php artisan make:filament-user
     - create a model
     ```bash
 php artisan make:model Student -m
-    ```
 - Apps/database/migrations/student
     ```php
         Schema::create('students', function (Blueprint $table) {
