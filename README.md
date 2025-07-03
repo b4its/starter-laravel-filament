@@ -26,9 +26,51 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ```bash
 php artisan filament:install --panels
 ```
+then type enter
+
 -   make new users account:
 ```bash
 php artisan make:filament-user
+```
+-   how to make new model to filament:
+    - create a model
+    ```bash
+php artisan make:model Student -m
+    ```
+    - Apps/database/migrations/student
+    ```bash
+        Schema::create('students', function (Blueprint $table) {
+            $table->id();
+            $table->string('nim')->unique();
+            $table->string('nama');
+            $table->string('fakultas');
+            $table->timestamps();
+        });
+    ```
+    - Apps/app/Models/Student.php
+    ```bash
+    use Illuminate\Database\Eloquent\Factories\HasFactory;
+    class Student extends Model
+    {
+        //
+        use HasFactory;
+        protected $fillable = 
+        [
+            'nim', 'nama', 'fakultas'
+        ];
+    }
+    ```
+    - migrate
+    ```bash
+php artisan migrate
+    ```
+    - filament resource Student
+    ```bash
+php artisan make:filament-resource StudentResource
+    ```
+- custom dashboard panel
+```bash
+php artisan make:filament-page Dashboard
 ```
 - optimizing filament for production
 ```bash
