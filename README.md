@@ -22,6 +22,10 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## laravel filament guide:
+- install filament panel
+```bash
+php artisan filament:install --panels
+```
 -   make new users account:
 ```bash
 php artisan make:filament-user
