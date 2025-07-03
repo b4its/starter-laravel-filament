@@ -37,8 +37,8 @@ php artisan make:filament-user
     ```bash
 php artisan make:model Student -m
     ```
-    - Apps/database/migrations/student
-    ```bash
+- Apps/database/migrations/student
+    ```php
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->string('nim')->unique();
@@ -48,7 +48,7 @@ php artisan make:model Student -m
         });
     ```
     - Apps/app/Models/Student.php
-    ```bash
+    ```php
     use Illuminate\Database\Eloquent\Factories\HasFactory;
     class Student extends Model
     {
@@ -60,11 +60,11 @@ php artisan make:model Student -m
         ];
     }
     ```
-    - migrate
+- migrate
     ```bash
 php artisan migrate
     ```
-    - filament resource Student
+- filament resource Student
     ```bash
 php artisan make:filament-resource StudentResource
     ```
