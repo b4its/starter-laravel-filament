@@ -34,8 +34,9 @@ php artisan make:filament-user
 ```
 -   how to make new model to filament:
     - create a model
-    ```bash
-php artisan make:model Student -m
+```bash
+php artisan make:model Student 
+```
 - Apps/database/migrations/student
     ```php
         Schema::create('students', function (Blueprint $table) {
