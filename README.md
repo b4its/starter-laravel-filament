@@ -61,13 +61,13 @@ php artisan make:model Student -m
     }
     ```
 - migrate
-    ```bash
+```bash
 php artisan migrate
-    ```
+```
 - filament resource Student
-    ```bash
+```bash
 php artisan make:filament-resource StudentResource
-    ```
+```
 - custom dashboard panel
 ```bash
 php artisan make:filament-page Dashboard
